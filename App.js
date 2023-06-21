@@ -5,19 +5,17 @@ import { IMG } from './src/components/IMG';
 import Paisagem from './assets/images/paisagem.png'
 import { Btn } from './src/components/Btn';
 
-
 export default function App() {
   return (
     <View style={styles.container}>
 
-      {/* <View style={styles.containerIMG}>
+      <View style={styles.containerIMG}>
         <IMG placeholderIMG={Paisagem}/>
-      </View> */}
-
-      <View styles={styles.containerButton}>
-        <Btn label="test 01"/>
       </View>
-
+      <View style={styles.containerButton}>
+        <Btn label="Escolha uma foto" primario={true}/>
+        <Btn label="Usar foto padrão"/>
+      </View>
       <StatusBar style="auto" />
     </View>
   );
@@ -25,7 +23,7 @@ export default function App() {
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
+    flex:1,
     backgroundColor: '#25292e',
     alignItems: 'center',
     justifyContent: 'center',
@@ -35,8 +33,8 @@ const styles = StyleSheet.create({
     paddingTop: 58,
   },
   containerButton: {
-    marginTop: 1,
+    flex: 1 / 2,
     alignItems:'center',
+    gap:15,
   },
-
 });
